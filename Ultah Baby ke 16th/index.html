@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet 16 - Azzahra Nurmala</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Love Elements -->
+    <div class="floating-element text-2xl" style="left: 5%; top: 15%; animation-delay: 0s; color: var(--primary-color);">❤️</div>
+    <div class="floating-element text-xl" style="left: 15%; top: 70%; animation-delay: 2s; color: var(--secondary-color);">💖</div>
+    <div class="floating-element text-lg" style="left: 25%; top: 35%; animation-delay: 4s; color: var(--accent-color);">✨</div>
+    <div class="floating-element text-xl" style="left: 35%; top: 85%; animation-delay: 1s; color: var(--primary-color);">🌸</div>
+    <div class="floating-element text-2xl" style="left: 45%; top: 25%; animation-delay: 3s; color: var(--secondary-color);">💕</div>
+    <div class="floating-element text-lg" style="left: 55%; top: 75%; animation-delay: 5s; color: var(--accent-color);">🌟</div>
+    <div class="floating-element text-xl" style="left: 65%; top: 45%; animation-delay: 1.5s; color: var(--primary-color);">💝</div>
+    <div class="floating-element text-2xl" style="left: 75%; top: 20%; animation-delay: 2.5s; color: var(--secondary-color);">🎀</div>
+    <div class="floating-element text-lg" style="left: 85%; top: 65%; animation-delay: 3.5s; color: var(--accent-color);">💫</div>
+    <div class="floating-element text-xl" style="left: 95%; top: 40%; animation-delay: 0.5s; color: var(--primary-color);">🦋</div>
+
+    <!-- Video Background -->
+    <video autoplay muted loop class="video-background">
+        <source src="Kebersamaan Kita Sayang.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+
+    <!-- Navigation -->
+    <a href="#game" class="text-text-secondary hover:text-white transition-colors">Game</a>
+    <nav class="fixed top-0 w-full z-50 nav-container">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold" style="color: var(--primary-color);">
+                    Azzahra's Sweet 16
+                </div>
+                <div class="nav-links hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-primary-color transition-colors">Home</a>
+                    <a href="#message" class="text-text-secondary hover:text-white transition-colors">Pesan Spesial</a>
+                    <a href="#memories" class="text-text-secondary hover:text-white transition-colors">Kenangan</a>
+                    <a href="#wishes" class="text-text-secondary hover:text-white transition-colors">Harapan</a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <a href="#game" class="mobile-nav-link">Game</a>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-menu" id="closeMenu">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home" class="mobile-nav-link">Home</a>
+        <a href="#message" class="mobile-nav-link">Pesan Spesial</a>
+        <a href="#memories" class="mobile-nav-link">Kenangan</a>
+        <a href="#wishes" class="mobile-nav-link">Harapan</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <!-- Birthday Animation -->
+            <div class="mb-8 fade-in">
+                <div class="text-8xl mb-4">🎂</div>
+            </div>
+            
+            <!-- Main Title -->
+            <h1 class="hero-title fade-swipe-left">
+                <span id="typed-title"></span>
+            </h1>
+            
+            <!-- Subtitle -->
+            <p class="text-2xl md:text-3xl mb-8 font-medium text-text-secondary fade-swipe-right">
+                Ulang Tahun yang Ke-16
+            </p>
+            
+            <!-- Hero Image -->
+            <div class="mb-8 max-w-md mx-auto fade-in">
+                <div class="image-container">
+                    <img src="images/3.jpeg" alt="Sweet 16 Birthday">
+                    <div class="image-overlay">
+                        <p class="text-white text-sm">Happy Sweet 16, Azzahra!</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Special Message -->
+            <div class="card p-8 mb-8 max-w-2xl mx-auto fade-in">
+                <p class="text-xl leading-relaxed text-text-secondary">
+                    Hari ini adalah hari yang paling spesial dalam hidupku, karena hari ini adalah hari kelahiran cahaya terindah dalam duniamu. 
+                    <span class="font-semibold text-white">Selamat Ulang Tahun, Azzahra Nurmala!</span>
+                </p>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+                <a href="#message" class="btn-primary">
+                    Baca Pesan Spesial
+                </a>
+                <a href="#memories" class="btn-outline">
+                    Lihat Kenangan Kita
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Message Section -->
+    <section id="message" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="section-title">Pesan Spesial Untukmu</h2>
+                <p class="text-xl text-text-secondary">Dari hatiku yang paling dalam</p>
+            </div>
+            
+            <div class="card p-8 md:p-12 fade-in">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4 fade-in">💝</div>
+                </div>
+                
+                <div class="space-y-6 text-lg leading-relaxed text-text-secondary">
+                    <p class="text-center text-xl font-medium mb-8 text-white fade-swipe-left">
+                        "Kepada Azzahra Nurmala, cahaya terindah dalam hidupku"
+                    </p>
+                    
+                    <p class="fade-in">
+                        Hari ini, saat kamu merayakan ulang tahun yang ke-16, aku ingin kamu tahu betapa istimewanya kamu dalam hidupku. 
+                        Setiap detik bersamamu adalah hadiah terindah yang Tuhan berikan padaku.
+                    </p>
+                    
+                    <p class="fade-in">
+                        Kamu adalah seperti bunga mawar yang mekar di tengah musim semi - indah, harum, dan membawa kebahagiaan bagi setiap orang 
+                        yang beruntung memilikimu dalam hidupnya. Senyummu mampu menerangi hari-hariku yang gelap, dan tawamu adalah musik terindah 
+                        yang pernah kudengar.
+                    </p>
+                    
+                    <p class="fade-in">
+                        Di usiamu yang ke-16 ini, aku berdoa agar kamu selalu diberi kesehatan, kebahagiaan, dan keberhasilan dalam setiap langkah 
+                        yang kamu ambil. Semoga semua mimpi-mimpimu menjadi kenyataan, dan semoga aku bisa selalu ada di sisimu untuk mendukung 
+                        dan mencintaimu setiap hari.
+                    </p>
+                    
+                    <p class="text-center font-semibold text-xl mt-8 text-white fade-swipe-right">
+                        Aku mencintaimu lebih dari kata-kata mampu mengungkapkan. 
+                        Selamat Ulang Tahun, kekasihku!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memories Section -->
+    <section id="memories" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="section-title">Kenangan Indah Kita</h2>
+                <p class="text-xl text-text-secondary">Momen-momen berharga bersamamu</p>
+            </div>
+            
+            <div class="image-grid">
+                <!-- Memory 1 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/Ci vitok.jpeg" alt="Memory 1">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Ci Vitok</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 2 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/Cantikku sayang.jpeg" alt="Memory 2">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Cantikku Sayang</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 3 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/4.jpeg" alt="Memory 3">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Mumup Nak Masak</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 4 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/5.jpeg" alt="Memory 4">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Aku Ganteng Bangett Aww</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 5 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/6.jpeg" alt="Memory 5">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Mandiri, Cantik, Berprestasi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Memory 6 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/7.jpeg" alt="Memory 6">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Masak Untuk Mas Suamiii</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory 7 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/8.jpeg" alt="Memory 7">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Glowinggggnyaaaaa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory 8 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/9.jpeg" alt="Memory 8">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Pinkkk Aww</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory 9 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/10.jpeg" alt="Memory 9">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Ciii Lucuk</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory 10 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/11.jpeg" alt="Memory 10">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Awww Mamasss Nak Ciumm</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory 11 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/12.jpeg" alt="Memory 11">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Gemesssnyaaaaa</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory 12 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/13.jpeg" alt="Memory 12">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Loppeeyouu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory 13 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/14.jpeg" alt="Memory 13">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Ceweeeku Sayanggg</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory 14 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/15.jpeg" alt="Memory 14">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Mwaaa Cipok Duluu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Memory 15 -->
+                <div class="card overflow-hidden fade-in">
+                    <div class="image-container">
+                        <img src="images/20.jpeg" alt="Memory 15">
+                        <div class="image-overlay">
+                            <p class="text-white text-sm">Embul Bulbull</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wishes Section -->
+    <section id="wishes" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="section-title">Harapan & Doaku</h2>
+                <p class="text-xl text-text-secondary">Untuk masa depanmu yang cerah</p>
+            </div>
+            
+            <div class="card p-8 md:p-12 fade-in">
+                <div class="text-center mb-8">
+                    <div class="text-6xl mb-4 fade-in">🌟</div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="card p-6 text-center fade-swipe-left">
+                        <div class="text-4xl mb-4">🎓</div>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Kesuksesan dalam Pendidikan</h3>
+                        <p class="text-text-secondary">Semoga kamu selalu sukses dalam studimu dan meraih semua impianmu</p>
+                    </div>
+                    
+                    <div class="card p-6 text-center fade-swipe-right">
+                        <div class="text-4xl mb-4">💪</div>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Kesehatan yang Sempurna</h3>
+                        <p class="text-text-secondary">Selalu diberi kesehatan dan kekuatan untuk menjalani setiap hari</p>
+                    </div>
+                    
+                    <div class="card p-6 text-center fade-swipe-left">
+                        <div class="text-4xl mb-4">💖</div>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Cinta yang Abadi</h3>
+                        <p class="text-text-secondary">Semoga cinta kita semakin kuat dan langgeng setiap harinya</p>
+                    </div>
+                    
+                    <div class="card p-6 text-center fade-swipe-right">
+                        <div class="text-4xl mb-4">🌈</div>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Kebahagiaan Sejati</h3>
+                        <p class="text-text-secondary">Selalu bahagia dan tersenyum dalam setiap langkah kehidupanmu</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12 fade-in">
+                    <p class="text-xl font-semibold text-white">
+                        "Aku akan selalu ada untukmu, mendukungmu, dan mencintaimu dalam setiap fase kehidupanmu"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Message -->
+    <section id="game" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12 fade-in">
+                <h2 class="section-title">Game Seru</h2>
+                <p class="text-xl text-text-secondary">Klik kue sebanyak mungkin sebelum waktu habis!</p>
+            </div>
+            
+            <div class="card p-8 md:p-12 text-center fade-in">
+                <div id="gameStart" class="space-y-6">
+                    <div class="text-6xl mb-4">🎮</div>
+                    <h3 class="text-2xl font-bold text-white">Klik Kue Ulang Tahun</h3>
+                    <p class="text-text-secondary">Klik kue yang jatuh sebelum menyentuh tanah!</p>
+                    <div class="flex justify-center gap-4 mt-6">
+                        <button id="startGame" class="btn-primary">Mulai Game</button>
+                        <button id="howToPlay" class="btn-outline">Cara Bermain</button>
+                    </div>
+                </div>
+                
+                <div id="gameArea" class="hidden mt-8">
+                    <div class="flex justify-between items-center mb-4">
+                        <div class="text-lg">
+                            <span class="text-white">Skor: </span>
+                            <span id="score" class="text-primary-color font-bold">0</span>
+                        </div>
+                        <div class="text-lg">
+                            <span class="text-white">Waktu: </span>
+                            <span id="timer" class="text-primary-color font-bold">60</span>
+                        </div>
+                        <div class="text-lg">
+                            <span class="text-white">Nyawa: </span>
+                            <span id="lives" class="text-primary-color font-bold">3</span>
+                        </div>
+                    </div>
+                    
+                    <div id="gameContainer" class="relative h-96 bg-bg-dark rounded-lg border-2 border-dashed border-primary-color overflow-hidden">
+                        <!-- Kue akan muncul di sini secara dinamis -->
+                    </div>
+                    
+                    <button id="pauseGame" class="btn-outline mt-4">Jeda</button>
+                </div>
+                
+                <div id="gameEnd" class="hidden space-y-6 mt-8">
+                    <div class="text-6xl mb-4" id="gameResultIcon">🎉</div>
+                    <h3 class="text-2xl font-bold text-white" id="gameResultText">Selamat!</h3>
+                    <p class="text-text-secondary">Skor akhir kamu: <span id="finalScore" class="text-primary-color font-bold">0</span></p>
+                    <div class="flex justify-center gap-4">
+                        <button id="restartGame" class="btn-primary">Main Lagi</button>
+                        <button id="backToMenu" class="btn-outline">Kembali ke Menu</button>
+                    </div>
+                </div>
+
+                <div id="instructions" class="hidden mt-8 text-left">
+                    <h4 class="text-xl font-bold text-white mb-4">Cara Bermain:</h4>
+                    <ul class="text-text-secondary space-y-2 list-disc list-inside">
+                        <li>Klik kue yang jatuh sebelum menyentuh tanah</li>
+                        <li>Setiap kue yang diklik = +10 poin</li>
+                        <li>Setiap kue yang terlewat = -1 nyawa</li>
+                        <li>Kue spesial (berwarna emas) = +50 poin</li>
+                        <li>Waktu bermain: 60 detik</li>
+                        <li>Nyawa awal: 3</li>
+                    </ul>
+                    <button id="backFromInstructions" class="btn-primary mt-6">Kembali</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+   <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <div class="flex justify-between items-center">
+            <h3 class="text-lg font-semibold" style="color: var(--primary-color);">
+                <i class="fas fa-music mr-2"></i>Music Player
+            </h3>
+            <div class="flex items-center space-x-2">
+                <button id="playPauseBtn" class="btn-primary text-sm py-1 px-3">
+                    Play
+                </button>
+                <button id="togglePlayer" class="btn-outline text-sm py-1 px-3">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div id="playerContent">
+            <div class="mt-4 space-y-2 max-h-60 overflow-y-auto">
+                <div class="music-item active" data-src="The 1975 - About You.mp3">
+                    <div>
+                        <p class="font-medium">The 1975 - About You</p>
+                        <p class="text-xs text-text-secondary">Official Music</p>
+                    </div>
+                </div>
+                <div class="music-item" data-src="A Thousand Years.mp3">
+                    <div>
+                        <p class="font-medium">A Thousand Years</p>
+                        <p class="text-xs text-text-secondary">TikTok Music</p>
+                    </div>
+                </div>
+                <div class="music-item" data-src="Coldplay, Fix You.mp3">
+                    <div>
+                        <p class="font-medium">Coldplay, Fix You</p>
+                        <p class="text-xs text-text-secondary">Repair Theme Relationship</p>
+                    </div>
+                </div>
+                <div class="music-item" data-src="Coldplay, Viva La Vida.mp3">
+                    <div>
+                        <p class="font-medium">Coldplay, Viva La Vida</p>
+                        <p class="text-xs text-text-secondary">Celebration Mix</p>
+                    </div>
+                </div>
+                <div class="music-item" data-src="I Wanna Be Yours.mp3">
+                    <div>
+                        <p class="font-medium">I Wanna Be Yours</p>
+                        <p class="text-xs text-text-secondary">I Wan't Always With You</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4 flex items-center">
+                <span id="currentTime" class="text-xs text-text-secondary">0:00</span>
+                <div class="flex-1 mx-2 h-1 bg-gray-700 rounded-full overflow-hidden">
+                    <div id="progressBar" class="h-full" style="background-color: var(--primary-color); width: 0%;"></div>
+                </div>
+                <span id="duration" class="text-xs text-text-secondary">0:00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="backgroundMusic"></audio>
+
+    <!-- Notification Container -->
+    <div class="notification-container" id="notificationContainer"></div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
